@@ -1,0 +1,19 @@
+<aside>
+  <a href="/">Inicio</a>
+  <a href="/about/">Sobre el autor</a>
+</aside>
+{% if "username" in session %}
+<aside>
+  <a href="/datasets/">Tus datasets</a>
+  <a href="/models/">Tus modelos</a>
+</aside>
+{% endif %}
+
+{% if "history" in session %}
+<aside>
+  <h4>Últimas páginas visitadas</h4>
+  {% for stuff in session["history"] %}
+  <a href="{{ stuff }}">{{ stuff }}</a>
+  {% endfor %}
+</aside>
+{% endif %}
