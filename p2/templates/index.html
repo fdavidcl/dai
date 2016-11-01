@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Hola desde Jinja!{% endblock %}
+{% block body %}
+<h3>Ejercicio 2</h3>
+<p class="explanation">En esta página se están cargando los recursos estáticos
+  <code>static/normalize.css</code>, <code>static/main.css</code> y <code>static/cat.jpg</code>.</p>
+<img src="static/cat.jpg" alt="Kitten :3">
+<p>Imagen CC BY-SA por <a href="https://placekitten.com/">{placekitten}</a></p>
+<h3>Ejercicio 3</h3>
+<nav>
+  <a href="/user/">Iniciar sesión (prueba URLs)</a>
+  <a href="/404">Enlace perdido (prueba 404)</a>
+</nav>
+<h3>Ejercicio 4</h3>
+<nav>
+  <a href="/mandelbrot">Fractales de Mandelbrot</a>
+</nav>
+<h3>Ejercicio 5</h3>
+<nav>
+  <a href="/svg">Generar imagen SVG aleatoria</a>
+</nav>
+<h3>Código utilizado:</h3>
+<pre><code>{{ code }}</code></pre>
+{% endblock %}

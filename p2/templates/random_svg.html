@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block body %}
+<h3>Generación aleatoria de imágenes SVG</h3>
+<nav>
+  <a href="/svg">Generar otra imagen</a>
+</nav>
+{{ image|safe }}
+{% endblock %}

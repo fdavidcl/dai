@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+  <body>
+    <div class="wrapper">
+    <h1><a href="/">Práctica 2</a></h1>
+    <h2>Desarrollo de Aplicaciones para Internet</h2>
+    {% block body %}{% endblock %}
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>

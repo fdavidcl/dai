@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block body %}
+<p class="explanation">Este formulario nos permite enviar parámetros a una petición de tipo <em>GET</em>, a la que el servidor responde redirigiendo a una URL con el formato <code>/user/&lt;username&gt;</code>.</p>
+
+<form action="/user/" method="GET">
+  <input type="text" name="login" placeholder="Usuario" />
+  <input type="submit" value="Iniciar" />
+</form>
+{% endblock %}

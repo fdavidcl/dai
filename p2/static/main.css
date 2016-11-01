@@ -1,0 +1,39 @@
+body {
+    color: #404040;
+}
+
+.wrapper {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+pre, code {
+    background: #eaeaea;
+}
+
+
+.explanation {
+    padding-left: 1em;
+    border-left: 0.4em solid #e0e0e0;
+}
+
+nav {
+    text-align: center;
+}
+nav a {
+    display: block;
+    padding: 0.4em 1em;
+    margin: 0.4em 0;
+    background: #f0f0f0;
+    color: #406080;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

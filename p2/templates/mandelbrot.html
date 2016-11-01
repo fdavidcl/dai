@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block body %}
+<h3>Generación de fractales de Mandelbrot</h3>
+<form action="/mandelbrot/" method="GET">
+  <p>
+    <label for="px">Ancho (px)</label>
+    <input id="px" name="width" type="number" min="16" max="1920" placeholder="Ancho en píxeles" />
+  </p>
+  <p>
+    <label for="x1">Punto inicial</label>
+    <input id="x1" name="x1" type="range" min="-3" max="1" step="0.1" onchange="x1v.value=x1.value" />
+    <output name="x1v"></output>
+    <input id="y1" name="y1" type="range" min="-1" max="3" step="0.1" onchange="y1v.value=y1.value" />
+    <output name="y1v"></output>
+  </p>
+  <p>
+    <label for="x2">Punto final</label>
+    <input id="x2" name="x2" type="range" min="-1" max="3" step="0.1" onchange="x2v.value=x2.value" />
+    <output name="x2v"></output>
+    <input id="y2" name="y2" type="range" min="-3" max="1" step="0.1" onchange="y2v.value=y2.value" />
+    <output name="y2v"></output>
+  </p>
+  <p><input type="submit" value="Generar" /></p>
+</form>
+<img src="data:image/png;base64,{{ image }}" />
+
+<h3>Código utilizado:</h3>
+<pre><code>{{ code }}</code></pre>
+{% endblock %}
