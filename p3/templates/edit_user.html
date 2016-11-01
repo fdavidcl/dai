@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Editar la cuenta{% endblock %}
+{% block body %}
+<form action="/users/edit/" class="pure-form" method="POST">
+  <fieldset class="pure-group">
+    <input name="realname" type="text" placeholder="Nombre" class="pure-input-1" value="{{ user["realname"] }}" />
+    <input name="email" type="email" placeholder="email@example.org" class="pure-input-1" value="{{ user["email"] }}" />
+  </fieldset>
+  <fieldset class="pure-group">
+    <input name="username" type="text" placeholder="Usuario" class="pure-input-1" value="{{ user["username"] }}" disabled />
+    <input name="oldpassword" type="password" placeholder="Contraseña actual" class="pure-input-1" />
+    <input name="newpassword" type="password" placeholder="Nueva contraseña" class="pure-input-1" />
+  </fieldset>
+  <input type="submit" value="Modificar datos" class="pure-button pure-button-primary pure-input-1" />
+</form>
+{% endblock %}

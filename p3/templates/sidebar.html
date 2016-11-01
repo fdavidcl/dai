@@ -1,11 +1,12 @@
 <aside>
   <a href="/">Inicio</a>
-  <a href="/about/">Sobre el autor</a>
+  <a href="https://github.com/fdavidcl/ruta">ruta en GitHub</a>
 </aside>
 {% if "username" in session %}
 <aside>
-  <a href="/datasets/">Tus datasets</a>
-  <a href="/models/">Tus modelos</a>
+  <a href="/users/{{ session["username"] }}">Mi perfil</a>
+  <a href="/datasets/">Mis datasets</a>
+  <a href="/models/">Mis modelos</a>
 </aside>
 {% endif %}
 

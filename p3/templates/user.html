@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Perfil de {{ user["realname"] }}{% endblock %}
+{% block body %}
+<ul>
+  <li>Usuario: <strong>{{ user["username"] }}</strong></li>
+  <li>Email: <strong>{{ user["email"] }}</strong></li>
+</ul>
+{% if "username" in session and user["username"] == session["username"] %}
+<a href="{{ url_for("edit_user") }}">Editar mi perfil</a>
+{% endif %}
+{% endblock %}

@@ -26,6 +26,10 @@ html, body {
 body {
     color: #657b83;
     background: #eee8d5;
+    font-size: 18px;
+}
+*, .pure-button, .pure-g [class*="pure-u"] {
+    font-family: Fira Sans, sans-serif;
 }
 
 a {
@@ -33,7 +37,7 @@ a {
 }
 
 .wrapper {
-    max-width: 80em;
+    max-width: 68em;
     margin: 0 auto;
     padding: 2em;
 }
@@ -42,7 +46,7 @@ header {
     background: #073642;
     color: #839496;
 }
-header a {
+header h1 a {
     text-decoration: none;
 }
 header .logo {
@@ -76,12 +80,17 @@ header input:not([type="submit"]) {
 header .logged-user {
     text-align: right;
 }
+header .please-signup {
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+}
 
 .main {
     background: #fdf6e3;
 }
 
-.main h1, .main h2, .main h3, .main h4 {
+.main h3:first-child {
     margin-top: 0;
 }
 

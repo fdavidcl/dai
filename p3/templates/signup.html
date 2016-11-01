@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Registrar un nuevo usuario{% endblock %}
+{% block body %}
+<form action="/users/" class="pure-form" method="POST">
+  <fieldset class="pure-group">
+    <input name="realname" type="text" placeholder="Nombre" class="pure-input-1" />
+    <input name="email" type="email" placeholder="email@example.org" class="pure-input-1" />
+  </fieldset>
+  <fieldset class="pure-group">
+    <input name="username" type="text" placeholder="Usuario" class="pure-input-1" />
+    <input name="password" type="password" placeholder="Contraseña" class="pure-input-1" />
+  </fieldset>
+  <input type="submit" value="Registrarme" class="pure-button pure-button-primary pure-input-1" />
+</form>
+{% endblock %}
